@@ -1,5 +1,5 @@
 import React, { ReactNode } from 'react'
-import {Link as ChakraLink, LinkProps, PropsOf} from "@chakra-ui/react"
+import {Link as ChakraLink, LinkProps} from "@chakra-ui/react"
 import Link from 'next/link'
 
 interface NavLinkProps extends LinkProps {
