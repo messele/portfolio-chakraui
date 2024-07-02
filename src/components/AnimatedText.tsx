@@ -25,13 +25,15 @@ const AnimationResolver = {
     delay:150
   },
   zoom_out: {
-    onStart: (element: HTMLElement) => {element.style.scale = "0"; element.style.display='block'},
+    onStart: (element: HTMLElement) => {element.style.scale = "0"; 
+      element.style.display = "block";
+      element.style.opacity='1'},
     onEnd: (element: HTMLElement) => (element.style.scale = "1"),
     delay:200
   },
   type: {
-    onStart: (element: HTMLElement) => (element.style.display = "none"),
-    onEnd: (element: HTMLElement) => (element.style.display = "block"),
+    onStart: (element: HTMLElement) => {element.style.display = "none"; element.style.opacity='1';},
+    onEnd: (element: HTMLElement) => {element.style.display = "block"},
     delay:50
   },
 };
@@ -45,6 +47,7 @@ const animate = (
   for (let idx = 0; idx < elements.length; idx++) {
     const element = elements[idx] as HTMLElement;
     resolver.onStart(element);
+    element.style.transition = "0.5s 0.5s ease-in"
     setTimeout(() => {
       resolver.onEnd(element);
       if (idx === elements.length - 1) {
@@ -85,8 +88,9 @@ const AnimatedText: React.FC<AnimatedTextProps> = ({
           as="span"
           className={`${disableAnimation ? '': "animated-text"}`}
           fontSize={{ base: "4xl", md: "6xl" }}
-          style={{ transition: disableAnimation ? 'none': "0.5s 0.5s ease-in",
-            display: disableAnimation ? 'block': 'none'
+          style={{ transition: 'none',
+            display: disableAnimation ? 'block': 'none',
+            opacity:0
           }}
           key={idx}
           whiteSpace="break-spaces"

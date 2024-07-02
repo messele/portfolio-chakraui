@@ -1,4 +1,5 @@
 export const NAME = "Messele Bulcha";
+export const EMAIL = "messele@tukulllc.com"
 
 export const JOB_TITLES = [
   "AWS Solutions Architect",
@@ -17,7 +18,3 @@ export const ABOUT = [
   "These days I work as an Independent contractor on Government Projects to modernize their workloads and deploy on AWS.",
   "In my free time I enjoy taking on various Machine Learning and Home automation projects.",
 ];
-
-export const WORK_EXPRIENCE = [{
-    start:'10/2019'
-}];

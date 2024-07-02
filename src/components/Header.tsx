@@ -1,9 +1,23 @@
 "use client";
-import { Flex, Stack, Box, useDisclosure, Avatar } from "@chakra-ui/react";
+import {
+  Flex,
+  Stack,
+  Box,
+  useDisclosure,
+  Avatar,
+  FormControl,
+  IconButton,
+  FormLabel,
+  InputGroup,
+  InputLeftElement,
+  Input,
+  useColorModeValue,
+} from "@chakra-ui/react";
 import { CloseIcon, HamburgerIcon } from "@chakra-ui/icons";
 import React from "react";
 import NavLink from "./NavLink";
 import { NAME } from "@/config";
+import { MdEmail, MdOutlineEmail } from "react-icons/md";
 
 export default function Header() {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -55,8 +69,9 @@ export default function Header() {
         >
           {" "}
           {[
+            { text: "Home", href: "./" },
             { text: "About", href: "./about" },
-            { text: "Contact", href: "./contact" },
+            { text: "Exprience", href: "./exprience" },
           ].map((k) => (
             <NavLink key={k.text} href={k.href} my={2}>
               {k.text}
