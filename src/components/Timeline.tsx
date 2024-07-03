@@ -42,13 +42,13 @@ const timelineData = [
   const  Timeline:React.FC<TimelineProps> = ({timelineData, timelineAnnotation, timelineTitle,timelineDescription}) => {
     const textColor = useColorModeValue("gray.700", "white.300")
     const bgIconColor = useColorModeValue("white.300", "gray.700")
-    const bg = useColorModeValue("gray.50", "gray.700")
-  
+    // const bg = useColorModeValue("gray.50", "gray.700")
+    const bg = useColorModeValue("inherit", "gray.700")
     return (
       <Card p="1rem" maxHeight="100%">
-        <CardHeader pt="0px" p="28px 0px 35px 21px">
+        <CardHeader pt="0px">
           <Flex direction="column">
-            <Text fontSize="lg" color={textColor} fontWeight="bold" pb=".5rem">
+            <Text fontSize="lg" color={textColor} fontWeight="bold">
               {timelineTitle}
             </Text>
             <Text fontSize="sm" color="gray.400" fontWeight="normal">
@@ -59,7 +59,7 @@ const timelineData = [
             </Text>
           </Flex>
         </CardHeader>
-        <CardBody ps="26px" pe="0px" mb="31px" position="relative">
+        <CardBody ps="26px" pe="0px" position="relative">
           <Flex direction="column">
             {timelineData.map((row, idx, arr) => {
               return (

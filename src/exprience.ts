@@ -45,10 +45,14 @@ export const experience = [
       "javascript",
       "react",
       "java",
-      "spring",
+      "spring mvc",
       "spring-boot",
       "typescript",
       "AWS EKS",
+      "Redis",
+      "PostgreSQL",
+      'Oracle',
+      "Jenkins",
       "Kubernetes",
     ]
   ),
@@ -61,6 +65,7 @@ export const experience = [
     [
       "Created AWS ETL Data Pipeline to run Risk Models",
       "Optimizing Data Extraction/Sanitization scripts with Spark/hadoop on AWS EMR",
+      'Created Cloudwatch Dashboards for monitoring and reporting'
     ],
     [
       "javascript",
@@ -73,8 +78,31 @@ export const experience = [
       "AWS Step Functions",
       "AWS Lambda",
       "AWS EMR",
-      "AWS Glue"
+      "AWS Glue",
+      "AWS Event Bridge"
     ]
+  ),
+  new ExprienceItem(
+    "10/2018", '02/2019',
+    "Sr AWS Java Developer/Architect",
+    "Fannie Mae",
+    `I joined Fannie mae on a short term contract to move their workloads database, 
+      models for finacial analysis.
+    `,
+    [
+      'Implemented FrontEnd application for monitoring and Reporting',
+      'Created CI/CD Pipelines to build and deploy scripts to AWS'
+    ],
+    [
+      'Angular',
+      'Java Script',
+      'AWS Lambda',
+      'AWS CloudWatch',
+      'AWS S3',
+      'AWS CloudFormation',
+      'Step functions',
+      'AWS Step functions', 
+      'Jenkins']
   ),
   new ExprienceItem(
     "10/2016",

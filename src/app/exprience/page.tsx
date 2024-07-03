@@ -36,11 +36,13 @@ export default function Exprience() {
       flexGrow={1}
       align="top"
     >
-      <HStack className="justify-between gap-10" align="start" width="100%">
-        <VStack marginRight="0" flexGrow={0} align="top" position="fixed">
+      <HStack className="justify-between gap-10" align="start" width="100%"
+      >
+        <VStack marginRight="0" flexGrow={0} align="top" position="fixed"
+        display={{base:'none', md:'block'}}>
           {/* Left TimeLine */}
           <Flex bg="white" padding={6} 
-            flexWrap='wrap' flexDirection='column'>
+            flexWrap='wrap' flexDirection='column' background={'inherit'}>
 
             <Timeline 
               timelineTitle="Exprience Summary"
@@ -54,17 +56,12 @@ export default function Exprience() {
                 index,
               }))}
             />
-          {/* {experience.map((v, idx) => (
-            // <Link key={idx} href={`#${idx}`}>
-            //   {v.start} - {v.end}
-            // </Link>
-          ))} */}
            </Flex>
         </VStack>
 
-        <VStack flexGrow={1}>
+        <VStack flexGrow={1} marginLeft={{base:'none', md:"5em"}}>
           {experience.map((v, idx) => (
-            <Card id={`${idx}`} key={idx} width="60%">
+            <Card id={`${idx}`} key={idx} width={{base:'100%', md:"60%"}}>
               <CardHeader>
                 <Flex justifyContent="flex-end">
                   <Text alignSelf="left" flexGrow={1}>
@@ -74,7 +71,7 @@ export default function Exprience() {
                 </Flex>
               </CardHeader>
               <CardBody>
-                <Accordion allowToggle={true}>
+                <Accordion allowToggle={true} defaultIndex={0}>
                   <AccordionItem>
                     <h2>
                       <AccordionButton>
@@ -91,6 +88,7 @@ export default function Exprience() {
                 </Accordion>
               </CardBody>
               <CardFooter gap="2" flexFlow="wrap">
+                <Text width={'100%'} fontWeight={'700'} color={'gray.500'}>Skills:</Text>
                 {v.skills.map((s, idx) => (
                   <Badge key={idx}>{s}</Badge>
                 ))}

@@ -20,7 +20,9 @@ export default function About() {
         effect="type"
         disableAnimation={titleAnimationDone}
         // fontFamily={"courier"}
+        containerClass="flex-wrap"
         fontSize="3xl"
+        flexWrap='wrap'
       />
     
         <AnimatedText
